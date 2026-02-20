@@ -1,5 +1,111 @@
-# Vue 3 + Vite
+# 星穹铁道模拟器 (Star Rail Simulator)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+一个基于 Vue 3 和 TypeScript 开发的《崩坏：星穹铁道》战斗模拟器。
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 🌟 项目简介
+
+本项目旨在提供一个网页端的战斗模拟环境，用户可以配置角色、敌人，模拟战斗过程，查看伤害数据、行动顺序以及 Buff 状态等详细信息。适用于伤害计算、排轴分析等场景。
+
+## ✨ 主要功能
+
+- **角色配置**：
+  - 添加/删除队伍角色
+  - 查看角色基础属性
+  - 配置角色技能（普攻、战技、终结技等）
+- **敌人配置**：
+  - 添加/删除敌方单位
+  - 设置敌人属性
+- **战斗模拟**：
+  - 设定模拟轮次
+  - 运行自动战斗模拟
+  - 查看行动条 (Action Order) 变化
+- **数据统计**：
+  - 详细的战斗日志
+  - 伤害统计与分析
+  - Buff/Debuff 状态监控
+
+## 🛠️ 技术栈
+
+- **前端框架**: [Vue 3](https://vuejs.org/)
+- **构建工具**: [Vite](https://vitejs.dev/)
+- **UI 组件库**: [Element Plus](https://element-plus.org/)
+- **语言**: [TypeScript](https://www.typescriptlang.org/)
+
+## 🚀 快速开始
+
+### 环境要求
+
+- [Node.js](https://nodejs.org/) (推荐 v16+)
+- npm 或 yarn
+
+### 本地开发
+
+1.  **克隆项目**
+
+    ```bash
+    git clone https://github.com/asukaneko/starrail-tools.git
+    cd star-rail-sim
+    ```
+
+2.  **安装依赖**
+
+    ```bash
+    npm install
+    ```
+
+3.  **启动开发服务器**
+
+    ```bash
+    npm run dev
+    ```
+
+    访问 `http://localhost:5173` 即可查看。
+
+### 构建部署
+
+```bash
+npm run build
+```
+
+构建产物将位于 `dist` 目录。
+
+### Docker 部署
+
+项目包含 `Dockerfile` 和 `docker-compose.yml`，支持 Docker 快速部署。
+
+```bash
+docker-compose up -d --build
+```
+
+服务将在 `8080` 端口运行。
+
+## 📂 项目结构
+
+```
+star-rail-sim/
+├── public/             # 静态资源 (字体、图标等)
+├── src/
+│   ├── assets/         # 项目资源
+│   ├── components/     # Vue 组件 (模拟器面板、角色配置等)
+│   ├── data/           # 静态数据 (角色技能数据等)
+│   ├── models/         # TypeScript 数据模型 (Character, Enemy 等)
+│   ├── utils/          # 工具函数 (模拟器核心逻辑、计算器等)
+│   ├── App.vue         # 根组件
+│   └── main.js         # 入口文件
+├── Dockerfile          # Docker 构建文件
+├── docker-compose.yml  # Docker Compose 配置
+├── index.html          # HTML 模板
+├── package.json        # 项目配置与依赖
+└── vite.config.js      # Vite 配置
+```
+
+## 📝 待办事项 / 计划
+
+- [ ] 完善更多角色和光锥数据
+- [ ] 优化伤害计算公式
+- [ ] 添加遗器系统
+- [ ] 支持导入/导出配置
+
+## 📄 许可证
+
+[MIT License](LICENSE)
