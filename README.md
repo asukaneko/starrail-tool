@@ -43,7 +43,7 @@
 1.  **克隆项目**
 
     ```bash
-    git clone https://github.com/asukaneko/starrail-tools.git
+    git clone https://github.com/asukaneko/starrail-tool.git
     cd star-rail-sim
     ```
 

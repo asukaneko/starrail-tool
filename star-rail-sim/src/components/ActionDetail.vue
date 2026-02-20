@@ -148,6 +148,9 @@ function getActionTypeColor(type: string | undefined): string {
 
 function getAvatarUrl(event: BattleEvent): string {
   if (event.isEnemy) return ''; 
+  if (event.avatarId) {
+    return `/StarRailRes/icon/avatar/${event.avatarId}.png`;
+  }
   if (event.actorId) {
     return `/StarRailRes/icon/avatar/${event.actorId}.png`;
   }
